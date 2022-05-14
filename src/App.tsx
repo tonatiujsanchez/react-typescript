@@ -1,4 +1,5 @@
 import Counter from "./components/Counter";
+import Usuario from "./components/Usuario";
 
 
 
@@ -13,6 +14,7 @@ function App() {
             </header>
             <main className="max-w-5xl mx-auto">
             <Counter />
+            <Usuario />
             </main>
 
         </>

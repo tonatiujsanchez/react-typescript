@@ -10,7 +10,7 @@ const Counter = () => {
     }
 
     return (
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
             <h3 className="font-semibold text-2xl">Counter: useState</h3>
             <div className="grid place-content-center h-16 w-36 border-2 border-gray-800 rounded-lg my-5 mx-auto">
                 <span className="text-2xl font-medium">{ counter }</span>
