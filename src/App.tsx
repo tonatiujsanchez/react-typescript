@@ -3,6 +3,8 @@ import UseEffectUseRef from './pages/UseEffectUseRef';
 import { BrowserRouter, Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import UseReducer from './pages/UseReducer';
 import CustomHooks from './pages/CustomHooks';
+import UseContextTodo from './pages/UseContextTodo/UseContextTodo';
+import TodoProvider from './pages/UseContextTodo/context/TodoProvider';
 
 
 
@@ -48,6 +50,14 @@ function App() {
                                     : 'text-gray-400 border-2 border-transparent rounded-lg py-1 px-2'} font-semibold text-lg`}>
                             CustomHooks
                         </NavLink>
+                        <NavLink 
+                            to="/context-todo"
+                            className={
+                                ({ isActive })=>`${isActive 
+                                    ? 'text-red-600 border-2 border-red-600 rounded-lg py-1 px-2'
+                                    : 'text-gray-400 border-2 border-transparent rounded-lg py-1 px-2'} font-semibold text-lg`}>
+                            UseContextTodo
+                        </NavLink>
                     </nav>
                 </header>
                 <main className="max-w-5xl mx-auto">
@@ -57,6 +67,11 @@ function App() {
                             <Route path='use-effect-ref' element={ <UseEffectUseRef />} />
                             <Route path='use-reducer' element={ <UseReducer />} />
                             <Route path='custom-hooks' element={ <CustomHooks />} />
+                            <Route path='context-todo' element={ 
+                               <TodoProvider>
+                                   <UseContextTodo />
+                               </TodoProvider>
+                            } />
                         </Routes>
                 </main>
             </BrowserRouter>
