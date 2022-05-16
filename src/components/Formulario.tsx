@@ -10,8 +10,8 @@ const Formulario = () => {
 
     const { formulario, handleChange } = useForm<FormData>({
         email: '',
-        name: 'Brandon Hernandez',
-        age: 28
+        name: '',
+        age: 0
     })
 
     const { email, name, age } = formulario
